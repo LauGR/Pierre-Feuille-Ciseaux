@@ -1,5 +1,5 @@
 .l'utilisateur doit choisir entre pierre,feuille et ciseau
-. l'ordinateur doit choisir entre pierre , feuille et ciseau
+. l'ordinateur choisit aléatoirement
 . Si l'ordinateur meilleur réponse que l'utilisateur , l'ordi gagne sinon c'est l'utilisateur
 
 DEBUT
