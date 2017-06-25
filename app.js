@@ -4,15 +4,16 @@ var b = "feuille";
 var c = "ciseaux";
 
 var joueur = prompt("Quelle est votre nom ?");
-var choixjoueur = prompt("Votre choix est " + a + ',' + b + ',' + c + '?');
-var choixordinateur = Math.floor(Math.random() * 3);
+var choixUtilisateur = prompt("Votre choix est " + a + ',' + b + ',' + c + '?');
+var choixOrdi = Math.floor(Math.random() * 3);
+var scortU =0;
+var scortO = 0;
 
 
 
 
 
-
-switch (choixordinateur) {
+switch (choixOrdi) {
     case 0:
         alert('pierre');
         break;
@@ -22,28 +23,24 @@ switch (choixordinateur) {
     case 2:
         alert('ciseaux');
         break;
-    default:
-        alert('No choice');
 }
 
-if (choixjoueur === a && choixordinateur === b && choixjoueur != choixordinateur) {
-    alert("C'est perdu");
-} else if (choixjoueur === a && choixordinateur === c && choixjoueur != choixordinateur) {
-    alert("C'est gagné");
-} else if (choixjoueur === b && choixordinateur === a && choixjoueur != choixordinateur) {
-    alert("C'est gagné")
-} else if (choixjoueur === b && choixordinateur === c && choixjoueur != choixordinateur) {
-    alert("C'est perdu");
-} else if (choixjoueur === c && choixordinateur === a && choixjoueur != choixordinateur) {
-    alert("C'est perdu");
-} else if (choixjoueur === c && choixordinateur === b && choixjoueur != choixordinateur) {
-    alert("C'est gagné");
-} else if (choixjoueur === a || choixjoueur === b || choixjoueur === c && choixjoueur === choixordinateur) {
-    alert("Egalité");
-} else {
-
-}
-
+function comparer(choixOrdi, choixUtilisateur) {
+ 
+       if(choixUtilisateur === choixOrdi) {
+           alert("égalité.");
+       }
+       else if((choixUtilisateur === a && choixOrdi === c) || (choixUtilisateur === b && choixOrdi === a) || (choixUtilisateur === c && choixOrdi === b)) {
+           alert("Vous avez gagné");
+           scortU++;
+           
+       }
+       else if((choixUtilisateur === b && choixOrdi === c) || (choixUtilisateur === a && choixOrdi === b) || (choixUtilisateur === c && choixOrdi === a)) {
+           alert("Vous avez perdu");
+           scortO++;
+       }
+ 
+   }
 
 
 
