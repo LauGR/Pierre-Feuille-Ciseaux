@@ -1,9 +1,13 @@
+
 var a = "pierre";
 var b = "feuille";
 var c = "ciseaux";
+
 var joueur = prompt("Quelle est votre nom ?");
 var choixjoueur = prompt("Votre choix est " + a + ',' + b + ',' + c + '?');
 var choixordinateur = Math.floor(Math.random() * 3);
+
+
 
 
 
@@ -22,22 +26,24 @@ switch (choixordinateur) {
         alert('No choice');
 }
 
-if (choixjouer === a && choixordinateur === b) {
+if (choixjoueur === a && choixordinateur === b && choixjoueur != choixordinateur) {
     alert("C'est perdu");
-} else if (choixjouer === a && choixordinateur === c) {
+} else if (choixjoueur === a && choixordinateur === c && choixjoueur != choixordinateur) {
     alert("C'est gagné");
-} else if (choixjoueur === b && choixordinateur === a) {
+} else if (choixjoueur === b && choixordinateur === a && choixjoueur != choixordinateur) {
     alert("C'est gagné")
-} else if (choixjouer === b && choixordinateur === c) {
+} else if (choixjoueur === b && choixordinateur === c && choixjoueur != choixordinateur) {
     alert("C'est perdu");
-} else if (choixjoueur === c && choixordinateur === a) {
+} else if (choixjoueur === c && choixordinateur === a && choixjoueur != choixordinateur) {
     alert("C'est perdu");
-} else if (choixjoueur === c && choixordinateur === b) {
+} else if (choixjoueur === c && choixordinateur === b && choixjoueur != choixordinateur) {
     alert("C'est gagné");
-} else if (choixjoueur ===  a || choixjoueur === b || choixjoueur === c && choixjoueur === choixordinateur) {
+} else if (choixjoueur === a || choixjoueur === b || choixjoueur === c && choixjoueur === choixordinateur) {
     alert("Egalité");
 } else {
-    
+
 }
 
-confirm("Voulez-vous rejouer ?");
+
+
+
